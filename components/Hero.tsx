@@ -2,35 +2,33 @@
 import Link from 'next/link';
 export default function Hero() {
   return (
-     <section
-      className="relative w-full bg-white bg-cover bg-center h-[80vh] flex items-center justify-left text-center"
-      style={{ backgroundImage: "url('/hero_nih02.png')" }} // Replace with your real image
-    >
-      {/* Overlay */}
-      
+   <section className="relative bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">
+      <div className="mx-auto max-w-7xl px-6 py-24 text-center lg:px-8">
+        {/* Headline */}
+        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+          Your <span className="text-indigo-600 dark:text-indigo-400">AI-Powered Growth Platform</span>
+        </h1>
 
-      {/* Content */}
-      <div className="relative z-10 text-black p-6 max-w-2xl">
-        <h2 className="text-4xl md:text-5xl font-medium mb-6 text-center">
-  ÖKA FÖRSÄLJNINGEN OCH FÖRENKLA<span className="text-white font-bold"> DIN RESTAURANGHANTERING</span> 
-</h2>
+        {/* Subheadline */}
+        <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-gray-600 dark:text-gray-300">
+          We combine design, automation, and AI to help you scale — no tech skills required.
+        </p>
 
-        
-        <div className="flex flex-col md:flex-row gap-4 justify-center">
-          <Link
-            href="/shop"
-            className="bg-black hover:bg-green-600 text-white px-6 py-3 rounded font-medium transition"
+        {/* CTA buttons */}
+         <br />
+          <div className="mt-8 flex justify-center gap-4">
+          <a
+            href="mailto:nokinhouse.service@gmail.com"
+            className="rounded-full bg-white px-6 py-3 text-base font-semibold text-indigo-600 shadow-lg hover:bg-gray-100"
           >
-            CONTACT US
-          </Link>
-          <Link
-            href="/recipes"
-            className="bg-white text-green-600 hover:bg-gray-100 px-6 py-3 rounded font-medium transition"
+            Contact Us
+          </a>
+          <a
+            href="#pricing"
+            className="rounded-full bg-indigo-500 border border-white px-6 py-3 text-base font-semibold text-white hover:bg-indigo-200"
           >
-            SERVICES
-          </Link>
-        
-
+            View Pricing
+          </a>
         </div>
       </div>
     </section>
