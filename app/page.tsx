@@ -2,11 +2,13 @@
 
 // app/page.tsx
 
+import CaseStudie from "@/components/CaseStudie";
 import Contact from "@/components/Contact";
 import CtaFooter from "@/components/CtaFooter";
+import Founder from "@/components/Founder";
 import Hero from "@/components/Hero";
-import Pricing from "@/components/priceing";
-import Services from "@/components/service";
+import MainNavbar from "@/components/MainNavbar";
+import Story from "@/components/Story";
 
 
 
@@ -14,10 +16,15 @@ import Services from "@/components/service";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
+       <MainNavbar />
       <Hero />
- <Services />
+       <Story/>
+       <Founder/>
+        <CaseStudie/>
 
-  <Pricing />
+
+
+
   <CtaFooter/>
       <Contact />
     </main>

@@ -1,37 +1,102 @@
 // app/components/Hero.tsx
-import Link from 'next/link';
+// app/components/Hero.tsx
+import Image from "next/image"
+
 export default function Hero() {
   return (
-   <section className="relative bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">
-      <div className="mx-auto max-w-7xl px-6 py-24 text-center lg:px-8">
-        {/* Headline */}
-        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-          Your <span className="text-indigo-600 dark:text-indigo-400">AI-Powered Growth Platform</span>
-        </h1>
+    <section className="relative bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24 lg:px-8">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          {/* LEFT: Image / Visual block */}
+          <div className="relative order-2 lg:order-1">
+            <div className="relative overflow-hidden rounded-3xl border border-gray-200/70 bg-white shadow-sm dark:border-gray-800/70 dark:bg-gray-900">
+              {/* Image area */}
+              <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3]">
+                {/* ✅ Replace src with your own image later (Canva export placed in /public) */}
+                <Image
+                  src="/notebook_2.png"
+                  alt="Nok in House studio"
+                  fill
+                  priority
+                  className="object-cover"
+                />
+                {/* Soft overlay for readability */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/35 via-black/10 to-transparent" />
+              </div>
 
-        {/* Subheadline */}
-        <p className="mt-6 max-w-2xl mx-auto text-lg leading-8 text-gray-600 dark:text-gray-300">
-          We combine design, automation, and AI to help you scale — no tech skills required.
-        </p>
+              {/* Overlay brand mark (like the example) */}
+              <div className="absolute left-6 top-6 sm:left-8 sm:top-8">
+                <div className="grid place-items-center border border-white/70 bg-white/10 backdrop-blur-md rounded-2xl h-24 w-24 sm:h-28 sm:w-28">
+                  <div className="text-left leading-[0.95] text-white">
+                    <div className="text-xl sm:text-2xl font-extrabold tracking-tight">
+                      NOK
+                    </div>
+                    <div className="text-xl sm:text-2xl font-extrabold tracking-tight">
+                      IN
+                    </div>
+                    <div className="text-xl sm:text-2xl font-extrabold tracking-tight">
+                      HOUSE
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-        {/* CTA buttons */}
-         <br />
-          <div className="mt-8 flex justify-center gap-4">
-          <a
-            href="mailto:nokinhouse.service@gmail.com"
-            className="rounded-full bg-white px-6 py-3 text-base font-semibold text-indigo-600 shadow-lg hover:bg-gray-100"
-          >
-            Contact Us
-          </a>
-          <a
-            href="#pricing"
-            className="rounded-full bg-indigo-500 border border-white px-6 py-3 text-base font-semibold text-white hover:bg-indigo-200"
-          >
-            View Pricing
-          </a>
+              {/* Small caption (optional) */}
+              <div className="p-5 sm:p-6">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Calm, system-first branding & content workflow for founders building abroad.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT: Text block */}
+          <div className="order-1 lg:order-2">
+            {/* Eyebrow */}
+            <p className="text-sm font-semibold tracking-wider text-indigo-600 dark:text-indigo-400 uppercase">
+              Nok in House Studio
+            </p>
+
+            {/* Headline */}
+            <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
+              Built from{" "}
+              <span className="text-indigo-400 dark:text-indigo-400">real problems</span>.
+              <br className="hidden sm:block" />
+              Proven by{" "}
+              <span className="text-indigo-400 dark:text-indigo-400">real systems</span>.
+            </h1>
+
+            {/* Subheadline */}
+            <p className="mt-6 max-w-xl text-lg leading-8 text-gray-600 dark:text-gray-300">
+              Bringing order to the creative process. We design branding and content systems
+              for founders seeking clarity — built internally first, then shared when it works.
+            </p>
+
+            {/* CTA buttons */}
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#case-studies"
+                className="inline-flex justify-center rounded-full bg-indigo-600 px-8 py-3 text-base font-semibold text-white shadow-lg hover:bg-indigo-500 transition"
+              >
+                See how we work
+              </a>
+
+              <a
+                href="mailto:nokinhouse.service@gmail.com"
+                className="inline-flex justify-center rounded-full border border-gray-300 bg-white px-8 py-3 text-base font-semibold text-gray-800 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 transition"
+              >
+                Talk with us
+              </a>
+            </div>
+
+            {/* Tiny trust line */}
+            <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
+              No pressure. No sales pitch. Just clarity and systems.
+            </p>
+          </div>
         </div>
       </div>
     </section>
-
-  );
+  )
 }
+
