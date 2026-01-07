@@ -14,7 +14,7 @@ export default function Founder() {
               <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3]">
                 {/* ✅ Replace src with your own image later (Canva export placed in /public) */}
                 <Image
-                  src="/nokblue_2.png"
+                  src="/nokblue_4.png"
                   alt="Nok in House studio"
                   fill
                   priority
@@ -24,22 +24,6 @@ export default function Founder() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-black/35 via-black/10 to-transparent" />
               </div>
 
-              {/* Overlay brand mark (like the example) */}
-              <div className="absolute left-6 top-60 sm:left-8 sm:top-62">
-                <div className="grid place-items-center border border-white/70 bg-white/10 backdrop-blur-md rounded-2xl h-24 w-24 sm:h-28 sm:w-28">
-                  <div className="text-left leading-[0.95] text-white">
-                    <div className="text-xl sm:text-2xl font-extrabold tracking-tight">
-                      NOK
-                    </div>
-                    <div className="text-xl sm:text-2xl font-extrabold tracking-tight">
-                      IN
-                    </div>
-                    <div className="text-xl sm:text-2xl font-extrabold tracking-tight">
-                      HOUSE
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               {/* Small caption (optional) */}
               <div className="p-5 sm:p-6">
