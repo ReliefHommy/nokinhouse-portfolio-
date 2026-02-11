@@ -78,14 +78,14 @@ export default function Hero() {
                 href="#case-studies"
                 className="inline-flex justify-center rounded-full bg-indigo-600 px-8 py-3 text-base font-semibold text-white shadow-lg hover:bg-indigo-500 transition"
               >
-                See how we work
+                Explore Projects
               </a>
 
               <a
                 href="mailto:nokinhouse.service@gmail.com"
                 className="inline-flex justify-center rounded-full border border-gray-300 bg-white px-8 py-3 text-base font-semibold text-gray-800 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 transition"
               >
-                Talk with us
+                Work With Me
               </a>
             </div>
 

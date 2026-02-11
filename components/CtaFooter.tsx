@@ -1,6 +1,9 @@
 export default function CtaFooter() {
   return (
-    <section className="bg-indigo-400 dark:bg-black py-20">
+    
+    <section
+      id="Cta-Footer"
+      className="bg-indigo-400 dark:bg-black py-20">
       <div className="mx-auto max-w-4xl px-6 text-center">
         {/* Headline */}
         <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">

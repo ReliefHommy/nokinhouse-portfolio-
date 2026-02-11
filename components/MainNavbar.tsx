@@ -12,9 +12,8 @@ export default function MainNavbar() {
 
   const nav: NavItem[] = [
     { label: 'Home', href: '#top' },
-    { label: 'Story', href: '#story' },
-    { label: 'Case Studies', href: '#case-studies' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'What I Do', href: '#What-I-Build' },
+    { label: 'Contact', href: '#Cta-Footer' },
   ]
 
   useEffect(() => {
@@ -93,7 +92,7 @@ export default function MainNavbar() {
               onClick={() => onNavClick('#contact')}
               className="rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition"
             >
-              Talk with us
+              Work with me
             </button>
           </div>
 
@@ -143,7 +142,7 @@ export default function MainNavbar() {
 
               <div className="pt-4 space-y-3">
                 <a
-                  href="mailto:nokinhouse.service@gmail.com"
+                  href="mailto:nok@nokinhouse.tech"
                   className="block text-center rounded-2xl border border-gray-300 bg-white px-5 py-3 text-sm font-semibold text-gray-800 hover:bg-gray-100 dark:bg-gray-950 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-900 transition"
                 >
                   Email
@@ -152,7 +151,7 @@ export default function MainNavbar() {
                   onClick={() => onNavClick('#contact')}
                   className="w-full rounded-2xl bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 transition"
                 >
-                  Talk with us
+                  Work with me
                 </button>
               </div>
 
