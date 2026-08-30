@@ -9,17 +9,12 @@ export default function CaseStudie() {
     {/* Section header */}
     <div className="mx-auto max-w-3xl text-center">
       <p className="text-sm font-semibold tracking-wider text-indigo-600 dark:text-indigo-400 uppercase">
-        Case Studies
+       The AI Product Businees tools, built for Asian businesses in Europe.
       </p>
       <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-        It did not start with services. It did started with a system.
+        Digital Tools <span className="text-indigo-400 dark:text-indigo-400">for Asian Businesses in Europe.</span>
       </h2>
-      <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-        Our work is built from real founder pain: scattered content, inconsistent branding,
-        and “starting from zero” every week.  
-        These case studies show how we turn chaos into a repeatable workflow — without forcing you
-        into a corporate process.
-      </p>
+   
     </div>
 
     {/* Case cards */}
@@ -27,40 +22,45 @@ export default function CaseStudie() {
       {/* Case 1 */}
       <article className="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8 shadow-sm hover:shadow-md transition">
         <p className="text-xs font-semibold tracking-wider text-gray-500 dark:text-gray-400 uppercase">
-          Case 01 • From chaos to clarity
+           Tool 01 • Turn your products into a clean, searchable online catalogue in minutes.
+
         </p>
         <h3 className="mt-3 text-xl font-bold text-gray-900 dark:text-white">
-          A founder had ideas everywhere — but no structure.
+          Ai Catalogue Builder
         </h3>
-        <p className="mt-4 text-gray-600 dark:text-gray-300 leading-7">
-          We built a simple “content pillar” system and reusable templates so weekly content
-          stopped feeling like a daily emergency.
+        <p className="mt-4 text-indigo-600 dark:text-indigo-400 leading-7">
+         Upload products via CSV / Excel (fast bulk import)
+          - Auto-generate product titles & descriptions with AI
         </p>
 
         <ul className="mt-6 space-y-3 text-sm text-gray-700 dark:text-gray-200">
           <li className="flex gap-3">
             <span className="mt-1 h-2 w-2 rounded-full bg-indigo-600 dark:bg-indigo-400" />
-            Defined 3 to 5 content pillars that match real customer intent
+            Ready for future order integration
           </li>
           <li className="flex gap-3">
             <span className="mt-1 h-2 w-2 rounded-full bg-indigo-600 dark:bg-indigo-400" />
-            Created reusable post templates (not one-off designs)
+            Auto-generate product titles & descriptions with AI
           </li>
           <li className="flex gap-3">
             <span className="mt-1 h-2 w-2 rounded-full bg-indigo-600 dark:bg-indigo-400" />
-            Built a weekly workflow that fits real life
+            Image + price + category management
+          </li>
+          <li className="flex gap-3">
+            <span className="mt-1 h-2 w-2 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+            Simple admin dashboard for updates
           </li>
         </ul>
 
         <div className="mt-8 flex items-center justify-between">
           <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
-            Result: Less stress, more consistency
+            Result:Shareable storefront link (no website needed)
           </span>
           <a
             href="#contact"
             className="text-sm font-semibold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
           >
-            Talk with us →
+            Request Early Access →
           </a>
         </div>
       </article>
@@ -68,20 +68,20 @@ export default function CaseStudie() {
       {/* Case 2 */}
       <article className="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8 shadow-sm hover:shadow-md transition">
         <p className="text-xs font-semibold tracking-wider text-gray-500 dark:text-gray-400 uppercase">
-          Case 02 • Content that sells without selling
+           Tool 02 • Automatically reply to customer messages and handle orders 24/7.
         </p>
         <h3 className="mt-3 text-xl font-bold text-gray-900 dark:text-white">
-          A food business needed growth — but did not want “hard sales posts.”
+          AI Customer Reply Assistant
         </h3>
-        <p className="mt-4 text-gray-600 dark:text-gray-300 leading-7">
-          We designed story-first content: education + identity + product sets.
-          The brand felt more premium — and conversion became natural.
+        <p className="mt-4 text-indigo-600 dark:text-indigo-400 leading-7">
+          AI replies to Facebook / chat messages
+          - Answer FAQs, provide product info, and handle orders automatically
         </p>
 
         <ul className="mt-6 space-y-3 text-sm text-gray-700 dark:text-gray-200">
           <li className="flex gap-3">
             <span className="mt-1 h-2 w-2 rounded-full bg-indigo-600 dark:bg-indigo-400" />
-            Built content around culture, ingredients, and daily-life use cases
+            Understands product questions and pricing
           </li>
           <li className="flex gap-3">
             <span className="mt-1 h-2 w-2 rounded-full bg-indigo-600 dark:bg-indigo-400" />
@@ -89,19 +89,27 @@ export default function CaseStudie() {
           </li>
           <li className="flex gap-3">
             <span className="mt-1 h-2 w-2 rounded-full bg-indigo-600 dark:bg-indigo-400" />
-            Created a repeatable “post → intent → action” flow
+           Auto-suggest products from your catalogue
+
+          </li>
+          <li className="flex gap-3">
+            <span className="mt-1 h-2 w-2 rounded-full bg-indigo-600 dark:bg-indigo-400" />
+          Handles simple order requests
+
+
           </li>
         </ul>
 
         <div className="mt-8 flex items-center justify-between">
           <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
-            Result: Stronger brand trust
+            Result: Reduces manual messaging time
+
           </span>
           <a
             href="#contact"
             className="text-sm font-semibold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
           >
-            Talk with us →
+            Request Early Access →
           </a>
         </div>
       </article>
@@ -109,32 +117,34 @@ export default function CaseStudie() {
       {/* Case 3 (Soft hint to internal platform, no STM name) */}
       <article className="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8 shadow-sm hover:shadow-md transition">
         <p className="text-xs font-semibold tracking-wider text-gray-500 dark:text-gray-400 uppercase">
-          Case 03 • Built from within
+          Tool 03 • Convert conversations into structured orders without manual work.
         </p>
         <h3 className="mt-3 text-xl font-bold text-gray-900 dark:text-white">
-          We built an internal studio system — before offering it to others.
+          Smart Order & Cart System.
         </h3>
         <p className="mt-4 text-gray-600 dark:text-gray-300 leading-7">
-          Instead of selling a “marketing package,” we created a studio workflow to solve
-          our own problems first — then adapted it for founders who want the same clarity.
+         We created a system workflow Turn chat messages into order summaries
+          - Generate shareable cart links for easy checkout (no website needed).
         </p>
 
         <div className="mt-6 rounded-xl bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 p-5">
           <p className="text-sm text-gray-700 dark:text-gray-200 leading-7">
-            <span className="font-semibold">Key idea:</span> We don’t build systems in slides.
-            We build them in real life, test them under pressure, and only share what works.
+            <span className="font-semibold">Key idea:</span> Add/remove items dynamically
+              based on customer messages, then generate a cart link for checkout.Designed for small sellers (no complex setup)
+
           </p>
         </div>
 
         <div className="mt-8 flex items-center justify-between">
           <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
-            Result: A workflow that scales calmly
+            Result: Export orders to Google Sheets / CSV
+
           </span>
           <a
             href="#story"
             className="text-sm font-semibold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
           >
-            Read the story →
+             Request Early Access →
           </a>
         </div>
       </article>

@@ -13,6 +13,10 @@
     src: url('/fonts/inter.woff2') format('woff2');
   }
   :root {
+    --color-navy: #222d69;
+    --color-lime: #a9d41c;
+    --color-bg-light: #f1f2f2;
+    --color-bg-grey: #d9d9d9;
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
     --card: 0 0% 100%;

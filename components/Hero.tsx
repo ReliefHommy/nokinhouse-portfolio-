@@ -1,102 +1,62 @@
+
 // app/components/Hero.tsx
-// app/components/Hero.tsx
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24 lg:px-8">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
-          {/* LEFT: Image / Visual block */}
-          <div className="relative order-2 lg:order-1">
-            <div className="relative overflow-hidden rounded-3xl border border-gray-200/70 bg-white shadow-sm dark:border-gray-800/70 dark:bg-gray-900">
-              {/* Image area */}
-              <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3]">
-                {/* ✅ Replace src with your own image later (Canva export placed in /public) */}
-                <Image
-                  src="/notebook_2.png"
-                  alt="Nok in House studio"
-                  fill
-                  priority
-                  className="object-cover"
-                />
-                {/* Soft overlay for readability */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/35 via-black/10 to-transparent" />
-              </div>
-
-              {/* Overlay brand mark (like the example) */}
-              <div className="absolute left-6 top-6 sm:left-8 sm:top-8">
-                <div className="grid place-items-center border border-white/70 bg-white/10 backdrop-blur-md rounded-2xl h-24 w-24 sm:h-28 sm:w-28">
-                  <div className="text-left leading-[0.95] text-white">
-                    <div className="text-xl sm:text-2xl font-extrabold tracking-tight">
-                      NOK
-                    </div>
-                    <div className="text-xl sm:text-2xl font-extrabold tracking-tight">
-                      IN
-                    </div>
-                    <div className="text-xl sm:text-2xl font-extrabold tracking-tight">
-                      HOUSE
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Small caption (optional) */}
-              <div className="p-5 sm:p-6">
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  Calm, system-first branding & content workflow for founders building abroad.
-                </p>
-              </div>
-            </div>
+    <section id="home" className="bg-[#222d69]">
+      <div className="mx-auto max-w-[1440px] px-6 py-16 md:py-24 flex flex-col md:flex-row items-center gap-12">
+        {/* Avatar + social icons */}
+        <div className="flex flex-col items-center gap-6 shrink-0">
+          <Image
+            src="/images/avatar.png"
+            alt="Nok Rattana"
+            width={159}
+            height={159}
+            className="rounded-full"
+          />
+          <div className="mt-8 flex gap-4">
+                <a href="https://www.youtube.com/@picasso_eye" className="underline">
+                <Image src="/images/icon-social-1.png" alt="" width={60} height={60} />
+            </a>
+          
+     
+          
+              <a href="mailto:nokinhouse.service@gmail.com" className="underline">
+            <Image src="/images/icon-social-2.png" alt="" width={60} height={60} />
+            </a>
+            <Image src="/images/icon-social-3.png" alt="" width={60} height={60} />
           </div>
+        </div>
 
-          {/* RIGHT: Text block */}
-          <div className="order-1 lg:order-2">
-            {/* Eyebrow */}
-            <p className="text-sm font-semibold tracking-wider text-indigo-600 dark:text-indigo-400 uppercase">
-              Nok in House Studio
-            </p>
-
-            {/* Headline */}
-            <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
-              Built from{" "}
-              <span className="text-indigo-400 dark:text-indigo-400">real problems</span>.
-              <br className="hidden sm:block" />
-              Proven by{" "}
-              <span className="text-indigo-400 dark:text-indigo-400">real systems</span>.
-            </h1>
-
-            {/* Subheadline */}
-            <p className="mt-6 max-w-xl text-lg leading-8 text-gray-600 dark:text-gray-300">
-              Bringing order to the creative process. We design branding and content systems
-              for founders seeking clarity — built internally first, then shared when it works.
-            </p>
-
-            {/* CTA buttons */}
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <a
-                href="#case-studies"
-                className="inline-flex justify-center rounded-full bg-indigo-600 px-8 py-3 text-base font-semibold text-white shadow-lg hover:bg-indigo-500 transition"
-              >
-                Explore Projects
-              </a>
-
-              <a
-                href="mailto:nokinhouse.service@gmail.com"
-                className="inline-flex justify-center rounded-full border border-gray-300 bg-white px-8 py-3 text-base font-semibold text-gray-800 hover:bg-gray-100 dark:bg-gray-900 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 transition"
-              >
-                Work With Me
-              </a>
-            </div>
-
-            {/* Tiny trust line */}
-            <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
-              No pressure. No sales pitch. Just clarity and systems.
-            </p>
+        {/* Copy */}
+        <div className="text-center md:text-left">
+          <h1 className="font-[family-name:var(--font-orbitron)] text-[#a9d41c] text-3xl md:text-5xl leading-tight">
+            Full-Stack Developer
+            <br />& AI Automation
+          </h1>
+          <p className="mt-6 font-[family-name:var(--font-open-sans)] text-white text-lg md:text-xl max-w-xl">
+            I build web apps, marketplaces, and AI-powered workflows —
+            from backend to deployment.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4 justify-center md:justify-start">
+            <Link
+              href="#works"
+              className="rounded-full bg-[#a9d41c] text-[#222d69] font-[family-name:var(--font-righteous)] text-sm px-8 py-4"
+            >
+              VIEW PROJECTS
+            </Link>
+            <Link
+              href="mailto:nokinhouse.service@gmail.com"
+              className="rounded-full border-2 border-[#a9d41c] text-white font-[family-name:var(--font-righteous)] text-sm px-8 py-4"
+            >
+              GET IN TOUCH
+            </Link>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 

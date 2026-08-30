@@ -1,35 +1,23 @@
 // app/page.tsx
 
 
-
-import Contact from "@/components/Contact";
-import CtaFooter from "@/components/CtaFooter";
+import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import MainNavbar from "@/components/MainNavbar";
-import WhatIBuild from "@/components/whatIbuild";
-
-
-
-
+import Projects from "@/components/Projects";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-       <MainNavbar />
+    <main>
+      <Header />
       <Hero />
- 
-   
-        <WhatIBuild/>
-
-
-
-
-  <CtaFooter/>
+      <Projects />
+      <About />
       <Contact />
     </main>
   );
 }
-
 
 
 

@@ -10,10 +10,10 @@ export default function WhatIBuild() {
     {/* Section header */}
     <div className="mx-auto max-w-3xl text-center">
       <p className="text-sm font-semibold tracking-wider text-indigo-600 dark:text-indigo-400 uppercase">
-        What I build
+        What We build
       </p>
       <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-        From Culture to Commerce —  <span className="text-indigo-400 dark:text-indigo-400">A Digital Infrastructure for Thai business in Europe.</span>
+        เชื่อมโยงวิถีไทยสู่ธุรกิจสากล —  <span className="text-indigo-400 dark:text-indigo-400">วางรากฐานดิจิทัลเพื่อผู้ประกอบการเอเชียในยุโรป</span>
       </h2>
       <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
         Our work is built from real founder pain: scattered content, inconsistent branding,

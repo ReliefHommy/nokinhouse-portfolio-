@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio — drop-in instructions
 
-## Getting Started
+## 1. Copy files into your existing Next.js repo (App Router)
 
-First, run the development server:
+- `app/layout.tsx` → merge into your existing `app/layout.tsx` (don't just
+  overwrite if you already have metadata/providers there)
+- `app/page.tsx` → this becomes your homepage (or move to `app/portfolio/page.tsx`
+  if you want it on a sub-route instead)
+- `app/globals.css` → merge the `:root` custom properties into your existing
+  globals.css
+- `components/Header.tsx`, `Hero.tsx`, `Projects.tsx`, `About.tsx`, `Contact.tsx`
+  → copy into your `components/` folder
+
+## 2. Export real images from Figma and place them here
+
+Create `/public/images/` in your repo and export these from Figma
+(right-click layer → Export → PNG at 2x, or SVG for icons):
+
+| Figma layer (approx.) | Save as                              |
+|---|---|
+| Logo (4 84056069)     | `public/images/logo-nok-rattana.png` |
+| Avatar (9 1)           | `public/images/avatar.png`           |
+| Social icon (13 4)     | `public/images/icon-social-1.png`    |
+| Social icon (12 2)     | `public/images/icon-social-2.png`    |
+| Social icon (11 2)     | `public/images/icon-social-3.png`    |
+| ecommerce 1            | `public/images/project-thai-flavours.png` |
+| community 1            | `public/images/project-somtams-society.png` |
+| social 1               | `public/images/project-ai-automation.png` |
+
+## 3. Fix before publishing
+
+- [ ] Confirm "Orbit" font — not a real Google Font. `layout.tsx` currently
+      substitutes Orbitron as a placeholder. Swap in the correct font (or
+      self-host if it's a paid/custom font).
+- [ ] Replace placeholder email/LinkedIn/GitHub links in `Contact.tsx`
+- [ ] Confirm project status text is current (Thai Flavours, Somtam mobile app)
+
+## 4. Run it
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check at both desktop and mobile widths — this version uses responsive
+flexbox instead of the fixed pixel positions from the Figma export, so
+spacing may need small tweaks to match your eye on the original design.
