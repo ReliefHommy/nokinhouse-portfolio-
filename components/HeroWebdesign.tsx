@@ -2,7 +2,7 @@
 // app/components/Hero.tsx
 import Image from "next/image"
 
-export default function Hero() {
+export default function HeroWebdesign() {
   return (
     <section className="relative bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-950 dark:via-gray-900 dark:to-gray-800">
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-20 lg:py-24 lg:px-8">
