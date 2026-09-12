@@ -1,5 +1,4 @@
 import { ArrowUpRight, Play, Sparkles, Workflow, HeartHandshake } from "lucide-react"
-import Image from "next/image"
 
 export default function FounderStorySection() {
   return (
