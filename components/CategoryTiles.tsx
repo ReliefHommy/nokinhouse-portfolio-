@@ -62,7 +62,7 @@ export const CategoryTils: React.FC = () => {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-indigo-800 dark:text-white mb-4 tracking-tight">
-            What's on <span className="text-violet-400">Somtam</span>
+            What&apos;s on <span className="text-violet-400">Somtam</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400">
             5 เรื่องที่คนในชุมชนถามหาและช่วยกันบอกต่อ — รวมไว้ให้ในที่เดียว
