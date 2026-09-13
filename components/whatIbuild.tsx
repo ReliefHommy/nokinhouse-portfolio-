@@ -1,156 +1,64 @@
-// app/components/WhatIBuild.tsx
-import Image from "next/image"
-export default function WhatIBuild() {
+import Link from "next/link";
+
+type CommunityCTAProps = {
+  title?: string;
+  body?: string;
+  primaryCta?: string;
+  primaryHref?: string;
+  secondaryCta?: string;
+  secondaryHref?: string;
+  className?: string;
+};
+
+export default function CommunityCTA({
+  title = "สร้างสรรค์โดยและเพื่อชุมชนคนรักอาหารไทยในยุโรป",
+  body = "หากวัด ร้านค้า หรือสวนของคุณยังไม่มีรายชื่ออยู่ที่นี่ คุณสามารถเพิ่มข้อมูลลงไปได้เลย เพราะทุกรายการที่เพิ่มเข้ามาจะช่วยให้การค้นหาของคนถัดไปรวดเร็วยิ่งขึ้น",
+  primaryCta = "Add a listing",
+  primaryHref = "/listings/new",
+  secondaryCta = "Add your temple",
+  secondaryHref = "/temples/new",
+  className = "",
+}: CommunityCTAProps) {
   return (
     <section
-  id="What-I-Build"
-  className="bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800"
->
-  <div className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-    {/* Section header */}
-    <div className="mx-auto max-w-3xl text-center">
-      <p className="text-sm font-semibold tracking-wider text-indigo-600 dark:text-indigo-400 uppercase">
-        What We build
-      </p>
-      <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-        เชื่อมโยงวิถีไทยสู่ธุรกิจสากล —  <span className="text-indigo-400 dark:text-indigo-400">วางรากฐานดิจิทัลเพื่อผู้ประกอบการเอเชียในยุโรป</span>
-      </h2>
-      <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-        Our work is built from real founder pain: scattered content, inconsistent branding,
-        and “starting from zero” every week.  
-        These case studies show how we turn chaos into a repeatable workflow — without forcing you
-        into a corporate process.
-      </p>
-    </div>
-
-    {/* Case cards */}
-    <div className="mt-14 grid gap-8 lg:grid-cols-3">
-      {/* Case 1 */}
-      <article className="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8 shadow-sm hover:shadow-md transition">
-        <p className="text-xs font-semibold tracking-wider text-gray-500 dark:text-gray-400 uppercase">
-          Case 01 • Society Events Platform
--
-        </p>
-        <h3 className="mt-3 text-xl font-bold text-gray-900 dark:text-white">
-      Community
-        </h3>
-        <p className="mt-4 text-gray-600 dark:text-gray-300 leading-7">
-          -
-Connecting Thai events across Europe.
-        </p>
-
-   <div className="relative overflow-hidden rounded-3xl border border-gray-200/70 bg-white shadow-sm dark:border-gray-800/70 dark:bg-gray-900">  {/* Image area */}
-                      <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3]">
-                        {/* ✅ Replace src with your own image later (Canva export placed in /public) */}
-                        <Image
-                          src="/images/community.png"
-                          alt="Nok in House studio"
-                          fill
-                          priority
-                          className="object-cover"
-                        />
-                        {/* Soft overlay for readability */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-black/35 via-black/10 to-transparent" />
-                      </div>
-                      </div>
-
-        <div className="mt-8 flex items-center justify-between">
-          <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
-            Result: Less stress, more consistency
-          </span>
-          <a
-            href="#contact"
-            className="text-sm font-semibold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
+      aria-labelledby="community-cta-title"
+      className={`bg-[#422646] text-[#F4F5F8] ${className}`}
+    >
+      <div className="mx-auto max-w-6xl px-6 py-20 lg:grid lg:grid-cols-12 lg:gap-16 lg:py-28">
+        {/* Headline column */}
+        <div className="lg:col-span-6">
+          <span aria-hidden="true" className="mb-7 block h-px w-16 bg-[#d876ac]" />
+          <h2
+            id="community-cta-title"
+            className="max-w-[18ch] text-[2rem] font-medium leading-[1.08] tracking-[-0.02em] sm:text-[2.75rem] lg:text-[3.25rem]"
           >
-            Talk with me →
-          </a>
+            {title}
+          </h2>
         </div>
-      </article>
 
-      {/* Case 2 */}
-      <article className="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8 shadow-sm hover:shadow-md transition">
-        <p className="text-xs font-semibold tracking-wider text-gray-500 dark:text-gray-400 uppercase">
-          Case 02 • Food & Grocery SaaS Infrastructure-
+        {/* Body + actions column */}
+        <div className="mt-10 lg:col-span-5 lg:col-start-8 lg:mt-0 lg:self-end">
+          <p className="max-w-[46ch] text-lg leading-relaxed text-[#F4F5F8]/75">
+            {body}
+          </p>
 
-        </p>
-        <h3 className="mt-3 text-xl font-bold text-gray-900 dark:text-white">
-          Commerce
-        </h3>
-        <p className="mt-4 text-gray-600 dark:text-gray-300 leading-7">
-      
--Helping small Thai businesses operate digitally.
-        </p>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              href={primaryHref}
+              className="inline-flex items-center rounded-full bg-[#d876ac] px-7 py-3.5 text-base font-medium text-[#422646] transition-colors duration-150 hover:bg-[#e295bd] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#F4F5F8] motion-reduce:transition-none"
+            >
+              {primaryCta}
+            </Link>
 
-<div className="relative overflow-hidden rounded-3xl border border-gray-200/70 bg-white shadow-sm dark:border-gray-800/70 dark:bg-gray-900">  {/* Image area */}
-                      <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3]">
-                        {/* ✅ Replace src with your own image later (Canva export placed in /public) */}
-                        <Image
-                          src="/images/ecommerce.png"
-                          alt="Nok in House studio"
-                          fill
-                          priority
-                          className="object-cover"
-                        />
-                        {/* Soft overlay for readability */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-black/35 via-black/10 to-transparent" />
-                      </div>
-                      </div>
-
-        <div className="mt-8 flex items-center justify-between">
-          <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
-            Result: Stronger brand trust
-          </span>
-          <a
-            href="#contact"
-            className="text-sm font-semibold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
-          >
-            Talk with me →
-          </a>
+            <Link
+              href={secondaryHref}
+              className="inline-flex items-center rounded-full border border-[#F4F5F8]/35 px-7 py-3.5 text-base font-medium text-[#F4F5F8] transition-colors duration-150 hover:border-[#F4F5F8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-[#F4F5F8] motion-reduce:transition-none"
+            >
+              {secondaryCta}
+            </Link>
+          </div>
         </div>
-      </article>
-
-      {/* Case 3 (Soft hint to internal platform, no STM name) */}
-      <article className="rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-8 shadow-sm hover:shadow-md transition">
-        <p className="text-xs font-semibold tracking-wider text-gray-500 dark:text-gray-400 uppercase">
-          Case 03 • AI-powered tools -
-        </p>
-        <h3 className="mt-3 text-xl font-bold text-gray-900 dark:text-white">
-          AI Content
-        </h3>
-        <p className="mt-4 text-gray-600 dark:text-gray-300 leading-7">
-        -for content, catalog, and automation.
-        </p>
-<div className="relative overflow-hidden rounded-3xl border border-gray-200/70 bg-white shadow-sm dark:border-gray-800/70 dark:bg-gray-900">  {/* Image area */}
-                      <div className="relative aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3]">
-                        {/* ✅ Replace src with your own image later (Canva export placed in /public) */}
-                        <Image
-                          src="/images/social.png"
-                          alt="Nok in House studio"
-                          fill
-                          priority
-                          className="object-cover"
-                        />
-                        {/* Soft overlay for readability */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-black/35 via-black/10 to-transparent" />
-                      </div>
-                      </div>
-        
-
-        <div className="mt-8 flex items-center justify-between">
-          <span className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">
-            Result: A workflow that scales calmly
-          </span>
-          <a
-            href="#story"
-            className="text-sm font-semibold text-gray-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition"
-          >
-            Read the story →
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
+      </div>
+    </section>
   );
 }

@@ -12,10 +12,10 @@ export default function Navbar() {
 
         {/* Navigation Links [cite: 22, 23, 24, 25] */}
         <div className="hidden md:flex items-center space-x-8 text-sm font-medium text-neutral-600">
-          <Link href="/" className="hover:text-black transition-colors">Explore</Link>
-          <Link href="/europe" className="hover:text-black transition-colors">Europe</Link>
-          <Link href="/bangkok" className="hover:text-black transition-colors">Sweden</Link>
-          <Link href="/stories" className="hover:text-black transition-colors">Stories</Link>
+          <Link href="/" className="hover:text-black transition-colors">Home</Link>
+          <Link href="/" className="hover:text-black transition-colors">Listing</Link>
+          <Link href="/" className="hover:text-black transition-colors">Addlisting</Link>
+          <Link href="/" className="hover:text-black transition-colors">Account</Link>
         </div>
 
         {/* Search & Profile [cite: 26, 27] */}
@@ -24,8 +24,10 @@ export default function Navbar() {
             <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
+            
+
           </button>
-          <div className="w-8 h-8 bg-indigo-800 rounded-full" />
+          <div className="w-8 h-8 bg-[#422646] text-white rounded-full" />
         </div>
       </div>
     </nav>
