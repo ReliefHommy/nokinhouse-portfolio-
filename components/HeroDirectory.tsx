@@ -71,7 +71,7 @@ export default function HeroDirectory() {
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href="#case-studies"
-                className="inline-flex justify-center rounded-full bg-[#422646] px-8 py-3 text-base font-semibold text-white shadow-lg hover:bg-indigo-500 transition"
+                className="inline-flex justify-center rounded-full bg-[#422646] px-8 py-3 text-base font-semibold text-white shadow-lg hover:bg-gray-400 transition"
               >
                 Browse listings
               </a>

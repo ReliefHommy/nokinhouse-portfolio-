@@ -1,7 +1,7 @@
 // app/layout.tsx
 import './globals.css'
 import type { Metadata } from 'next'
-import { Orbitron, Righteous, } from "next/font/google";
+import { Orbitron, Righteous, Cormorant_Garamond ,Plus_Jakarta_Sans} from "next/font/google";
 
 // NOTE: "Orbit" (used for body text in the Figma file) is not a standard
 // Google Font. Swap this for the correct font once confirmed — using
@@ -10,6 +10,18 @@ const orbitron = Orbitron({
   subsets: ["latin"],
   weight: ["400", "600"],
   variable: "--font-orbitron",
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-cormorant-garamond",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-Plus_Jakarta_Sans",
 });
 
 const righteous = Righteous({
@@ -21,8 +33,8 @@ const righteous = Righteous({
 
 
 export const metadata: Metadata = {
-  title: 'Nok Rattana — Full-Stack Developer & AI Automation',
-  description: 'Full-stack developer building web apps, marketplaces, and AI-powered workflows.',
+  title: 'STM Art Mail Club — STM Grocery Mail Club local shop',
+  description: 'Draw The Whole City, Sweden & Wedding Venues.',
 }
 
 export default function RootLayout({

@@ -80,6 +80,10 @@ body {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FAF6F0; /* Warm cotton rag paper */
+    color: #2C2724; /* Deep sepia ink */
+    background-image: radial-gradient(#E5DDD0 0.75px, transparent 0.75px);
+    background-size: 24px 24px;
 }
 
 * {
@@ -101,12 +105,22 @@ a {
 
 
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+
+/* Tactile Paper & Stamp Utilities */
+.paper-card {
+  background: #FFFDF9;
+  box-shadow: 0 10px 30px -10px rgba(44, 39, 36, 0.08), 0 1px 4px rgba(44, 39, 36, 0.04);
+  border: 1px solid #EAE2D6;
+}
+.postage-stamp {
+  background: #FFFDF9;
+  padding: 6px;
+  border: 2px dashed #C8BBAE;
+  box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.wax-seal {
+  background: radial-gradient(circle at 30% 30%, #B84A39, #8A2E20);
+  box-shadow: 2px 4px 10px rgba(138, 46, 32, 0.35), inset 0 2px 4px rgba(255, 255, 255, 0.25);
 }
 

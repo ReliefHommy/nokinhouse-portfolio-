@@ -17,7 +17,7 @@ export default function CategoryTiles() {
       icon: <CookingPot className="h-8 w-8 text-[#d876ac]" />,
     },
     {
-      en_title: "Group Buying",
+      en_title: "Group Order",
       th_title: "รวมกลุ่มสั่งซื้อสินค้า",
       desc: "บางครั้งการนำเข้าสินค้าหนึ่งพาเลทก็ใหญ่เกินกว่าร้านเดียวหรือครัวเล็ก ๆ จะสั่งไหว ลองหาคนในพื้นที่ที่ต้องการสินค้าเดียวกัน แล้วรวมออเดอร์กัน แบ่งกันสั่ง แบ่งค่าขนส่ง และรับของร่วมกัน",
       icon: <ShoppingBasket className="h-8 w-8 text-[#d876ac]" />,
